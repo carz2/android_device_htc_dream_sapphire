@@ -71,7 +71,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES := \
     keyguard.no_require_sim=true \
     ro.ril.hsxpa=2 \
-    ro.ril.gprsclass=10 \
+    ro.ril.gprsclass=12 \
+    ro.ril.hsdpa.category=8 \
+    ro.ril.enable.dtm=1 \
+    ro.ril.hsupa.category=5 \
     ro.media.dec.jpeg.memcap=10000000 \
     ro.com.google.clientidbase=android-tmobile-us \
     ro.com.google.clientidbase.vs=android-hms-tmobile-us \
@@ -122,9 +125,13 @@ else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+#
+#Copy in prebuilt kernel modules
+#
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/htc/dream_sapphire/prebuilt/wlan.ko:/system/lib/modules/wlan.ko \
+    device/htc/dream_sapphire/prebuilt/modules/6355-cm7-modules.sqf:/system/lib/modules/modules.sqf
 
 ## (2) Also get non-open-source aspects if available
 $(call inherit-product-if-exists, vendor/htc/dream_sapphire/dream_sapphire-vendor.mk)
