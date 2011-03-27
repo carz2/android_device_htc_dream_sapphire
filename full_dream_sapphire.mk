@@ -109,7 +109,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65536
+    ro.opengles.version=65537
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \

@@ -42,7 +42,7 @@ WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
-BOARD_KERNEL_BASE := 0x02000000
+BOARD_KERNEL_BASE := 0x19200000
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 
 #libsurfaceflinger to avoid Draw Texture Extenstion
@@ -52,7 +52,7 @@ BOARD_HAVE_BLUETOOTH := true
 
 BOARD_VENDOR_USE_AKMD := akm8976
 
-BOARD_VENDOR_QCOM_AMSS_VERSION := 6220
+BOARD_VENDOR_QCOM_AMSS_VERSION := 6355
 
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -62,7 +62,7 @@ BOARD_EGL_CFG := device/htc/dream_sapphire/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
 
-BOARD_USE_FROYO_LIBCAMERA := true
+BOARD_USE_ECLAIR_LIBCAMERA := true
 
 BOARD_NO_RGBX_8888 := true
 
