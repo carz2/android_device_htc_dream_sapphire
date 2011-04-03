@@ -51,11 +51,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt stuff
 PRODUCT_COPY_FILES += \
-    device/htc/dream_sapphire/prebuilt/init.trout.rc:root/init.trout.rc \
     device/htc/dream_sapphire/prebuilt/init.sapphire.rc:root/init.sapphire.rc \
-    device/htc/dream_sapphire/prebuilt/build.trout.prop:system/build.trout.prop \
     device/htc/dream_sapphire/prebuilt/build.sapphire.prop:system/build.sapphire.prop \
-    device/htc/dream_sapphire/prebuilt/ueventd.trout.rc:root/ueventd.trout.rc \
     device/htc/dream_sapphire/prebuilt/ueventd.sapphire.rc:root/ueventd.sapphire.rc \
     device/htc/dream_sapphire/prebuilt/vold.fstab:system/etc/vold.fstab
 
