@@ -90,7 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # This only affects the case in which there are remembered access points,
 # but none are in range.
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=45
 
 # density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 160 dpi. 
@@ -132,6 +132,13 @@ PRODUCT_COPY_FILES += \
 
 ## (2) Also get non-open-source aspects if available
 $(call inherit-product-if-exists, vendor/htc/dream_sapphire/dream_sapphire-vendor.mk)
+
+# stagefright settings
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-meta=true \
+    media.stagefright.enable-scan=true \
+    media.stagefright.enable-http=true
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
