@@ -102,10 +102,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=0
 
-# Disable JIT by default
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.execution-mode=int:fast
-
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -140,6 +136,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-scan=true \
     media.stagefright.enable-http=true
 
+# Performences tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.heapsize=24m \
+    persist.sys.use_dithering=0 \
+
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
 
@@ -147,6 +149,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_dream_sapphire
-PRODUCT_DEVICE := dream_sapphire
+PRODUCT_DEVICE := sapphire
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on Dream/Sapphire
+PRODUCT_MODEL := Full Android on Sapphire
