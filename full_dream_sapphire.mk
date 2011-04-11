@@ -105,7 +105,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65537
+    ro.opengles.version=65536
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
@@ -148,7 +148,7 @@ $(call inherit-product, device/htc/common/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_dream_sapphire
+PRODUCT_NAME := full_sapphire
 PRODUCT_DEVICE := sapphire
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Full Android on Sapphire
