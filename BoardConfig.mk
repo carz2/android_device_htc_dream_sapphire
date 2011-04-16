@@ -43,7 +43,7 @@ WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
 BOARD_KERNEL_BASE := 0x19200000
-BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null mtdparts=msm_nand:256K@0x0000024C0000(misc),5120K@0x0000026C0000(recovery),2560K@0x000002BC0000(boot),143360k@0x000002E40000(system),3072k@0xBA40000(cache),330496k@0xBD40000(userdata)
 
 #libsurfaceflinger to avoid Draw Texture Extenstion
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
@@ -77,7 +77,7 @@ TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
 TARGET_BOOTLOADER_BOARD_NAME := sapphire
-TARGET_OTA_ASSERT_DEVICE := trout,sapphire
+TARGET_OTA_ASSERT_DEVICE := sapphire
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_BOOTLOADER_BOARD_NAME=sapphire
 
 # # cat /proc/mtd

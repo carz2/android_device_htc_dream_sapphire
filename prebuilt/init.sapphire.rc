@@ -41,11 +41,9 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660                /sys/class/rfkill/rfkill0/state
 
-    # cpufreq configurations
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 245760
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 40000
-    write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 85
+ Enable low memory killer to check file pages
+    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,0,5632,6144
+    write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
     # enable insecure AGPS
     setprop ro.ril.def.agps.mode 2
