@@ -45,6 +45,9 @@ on boot
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,0,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
+    # lowmem killer minfree adjustments
+    write /sys/module/lowmemorykiller/parameters/minfree 1536,2048,4096,9216,10240,10240
+
     # enable insecure AGPS
     setprop ro.ril.def.agps.mode 2
 
