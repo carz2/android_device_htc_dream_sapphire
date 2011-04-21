@@ -32,6 +32,7 @@ TARGET_CPU_ABI := armeabi
 TARGET_ARCH_VARIANT := armv6j
 
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
@@ -44,9 +45,15 @@ WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
 BOARD_KERNEL_BASE := 0x19200000
 
-#BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null mtdparts=msm_nand:256K@0x0000024C0000(misc),5120K@0x0000026C0000(recovery),2560K@0x000002BC0000(boot),143360k@0x000002E40000(system),3072k@0xBA40000(cache),330496k@0xBD40000(userdata)
+CUSTOM_MTD :=true
 
+ifeq (true,$(CUSTOM_MTD))
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null mtdparts=msm_nand:256K@0x0000024C0000(misc),5120K@0x0000026C0000(recovery),2560K@0x000002BC0000(boot),143360k@0x000002E40000(system),3072k@0xBA40000(cache),330496k@0xBD40000(userdata)
+else
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
+endif
+
+OVERRIDE_FORCE_SECURE_OFF := true
 
 #libsurfaceflinger to avoid Draw Texture Extenstion
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true

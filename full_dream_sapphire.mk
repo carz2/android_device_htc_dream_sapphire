@@ -90,7 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # This only affects the case in which there are remembered access points,
 # but none are in range.
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.supplicant_scan_interval=45
+    wifi.supplicant_scan_interval=15
 
 # density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 160 dpi. 
@@ -113,7 +113,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel stuff
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/htc/dream_sapphire/kernel
+	LOCAL_KERNEL := device/htc/dream_sapphire/prebuilt/kernel/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -140,7 +140,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=24m \
-    persist.sys.use_dithering=0 \
+
+# Disable Compcache by default on 6355sapphire
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.compcache.default=0
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)

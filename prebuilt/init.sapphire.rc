@@ -42,7 +42,7 @@ on boot
     chmod 0660                /sys/class/rfkill/rfkill0/state
 
  Enable low memory killer to check file pages
-    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,0,5632,6144
+    write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,4632,5632,6144
     write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
     # lowmem killer minfree adjustments
