@@ -45,15 +45,16 @@ WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
 BOARD_KERNEL_BASE := 0x19200000
 
-CUSTOM_MTD :=true
+#CUSTOM_MTD :=true
 
 ifeq (true,$(CUSTOM_MTD))
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null mtdparts=msm_nand:256K@0x0000024C0000(misc),5120K@0x0000026C0000(recovery),2560K@0x000002BC0000(boot),143360k@0x000002E40000(system),3072k@0xBA40000(cache),330496k@0xBD40000(userdata)
+
+PRODUCT_COPY_FILES += \
+     device/htc/dream_sapphire/prebuilt/init.d/06BindCache:system/etc/init.d/06BindCache
 else
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 endif
-
-OVERRIDE_FORCE_SECURE_OFF := true
 
 #libsurfaceflinger to avoid Draw Texture Extenstion
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
@@ -119,5 +120,5 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0aa00000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0a5c0000
 
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_sapphire librecovery_ui_htc
-TARGET_PREBUILT_KERNEL := device/htc/dream_sapphire/kernel
-LOCAL_KERNEL := device/htc/dream_sapphire/kernel
+TARGET_PREBUILT_KERNEL := device/htc/dream_sapphire/prebuilt/kernel/kernel
+LOCAL_KERNEL := device/htc/dream_sapphire/prebuilt/kernel/kernel

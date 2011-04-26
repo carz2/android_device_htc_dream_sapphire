@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES += \
     device/htc/dream_sapphire/prebuilt/build.sapphire.prop:system/build.sapphire.prop \
     device/htc/dream_sapphire/prebuilt/ueventd.sapphire.rc:root/ueventd.sapphire.rc \
     device/htc/dream_sapphire/prebuilt/vold.fstab:system/etc/vold.fstab
+    
 
 # Keylayout / Headset
 PRODUCT_COPY_FILES += \
@@ -105,7 +106,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65536
+    ro.opengles.version=65537
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
@@ -139,11 +140,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Performences tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
-    dalvik.vm.heapsize=24m \
-
-# Disable Compcache by default on 6355sapphire
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.compcache.default=0
+    dalvik.vm.heapsize=24m
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
