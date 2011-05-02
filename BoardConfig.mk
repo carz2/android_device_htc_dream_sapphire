@@ -43,6 +43,10 @@ WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
+TARGET_NO_KERNEL := false
+TARGET_NO_RECOVERY := false
+TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/dream_sapphire/prebuilt/kernel/kernel
+
 BOARD_KERNEL_BASE := 0x19200000
 
 #CUSTOM_MTD :=true
