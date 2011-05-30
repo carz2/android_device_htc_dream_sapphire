@@ -28,7 +28,7 @@
     <!-- Flag indicating whether the surface flinger is inefficient
          at performing a blur.  Used by parts of the UI to turn off
          the blur effect where it isn't worth the performance hit. -->
-    <bool name="config_sf_slowBlur">false</bool>
+    <!--bool name="config_sf_slowBlur">false</bool-->
 
     <!-- The duration (in milliseconds) of a short animation. -->
     <integer name="config_shortAnimTime">100</integer>
@@ -63,6 +63,7 @@
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
+
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
