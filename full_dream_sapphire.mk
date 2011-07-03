@@ -20,6 +20,12 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/dream_sapphire/overlay
 
+#PRODUCT_LOCALES += mdpi
+
+PRODUCT_COPY_FILES += \
+    device/htc/dream_sapphire/prebuilt/12compcache:system/etc/init.d/12compcache \
+    device/htc/dream_sapphire/prebuilt/rzscontrol:system/xbin/rzscontrol
+
 PRODUCT_PACKAGES += \
     VoiceDialer \
     sensors.trout \
@@ -106,7 +112,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=65537
+    ro.opengles.version=65536
 
 # media configuration xml file
 PRODUCT_COPY_FILES += \
@@ -137,7 +143,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-scan=true \
     media.stagefright.enable-http=true
 
-# Performences tweaks
+# Performance tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.heapsize=24m
