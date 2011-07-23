@@ -20,7 +20,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/htc/dream_sapphire/overlay
 
-#PRODUCT_LOCALES += mdpi
+PRODUCT_LOCALES += mdpi
 
 PRODUCT_COPY_FILES += \
     device/htc/dream_sapphire/prebuilt/12compcache:system/etc/init.d/12compcache \
@@ -137,11 +137,11 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product-if-exists, vendor/htc/dream_sapphire/dream_sapphire-vendor.mk)
 
 # stagefright settings
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.enable-player=true \
-    media.stagefright.enable-meta=true \
-    media.stagefright.enable-scan=true \
-    media.stagefright.enable-http=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    media.stagefright.enable-player=true \
+#    media.stagefright.enable-meta=true \
+#    media.stagefright.enable-scan=true \
+#    media.stagefright.enable-http=true
 
 # Performance tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
