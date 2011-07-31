@@ -22,6 +22,8 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
+BOARD_USE_ECLAIR_LIBCAMERA := true
+
 JS_ENGINE := v8
 
 # inherit from the proprietary version
@@ -76,8 +78,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_EGL_CFG := device/htc/dream_sapphire/egl.cfg
 
 BOARD_USES_QCOM_LIBS := true
-
-BOARD_USE_ECLAIR_LIBCAMERA := true
 
 BOARD_NO_RGBX_8888 := true
 

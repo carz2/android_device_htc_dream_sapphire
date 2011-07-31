@@ -31,10 +31,6 @@ PRODUCT_PACKAGES += \
     sensors.trout \
     sensors.sapphire \
 	sapphire-keypad.kcm \
-	trout-keypad.kcm \
-	trout-keypad-v2.kcm \
-	trout-keypad-v3.kcm \
-	trout-keypad-qwertz.kcm \
 	wlan.ko \
 	vold.fstab \
 	wlan_loader \
@@ -65,10 +61,6 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout / Headset
 PRODUCT_COPY_FILES += \
-    device/htc/dream_sapphire/keylayout/trout-keypad.kl:system/usr/keylayout/trout-keypad.kl \
-    device/htc/dream_sapphire/keylayout/trout-keypad-qwertz.kl:system/usr/keylayout/trout-keypad-qwertz.kl \
-    device/htc/dream_sapphire/keylayout/trout-keypad-v2.kl:system/usr/keylayout/trout-keypad-v2.kl \
-    device/htc/dream_sapphire/keylayout/trout-keypad-v3.kl:system/usr/keylayout/trout-keypad-v3.kl \
     device/htc/dream_sapphire/keylayout/sapphire-keypad.kl:system/usr/keylayout/sapphire-keypad.kl \
     device/htc/dream_sapphire/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl
 
@@ -137,11 +129,11 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product-if-exists, vendor/htc/dream_sapphire/dream_sapphire-vendor.mk)
 
 # stagefright settings
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    media.stagefright.enable-player=true \
-#    media.stagefright.enable-meta=true \
-#    media.stagefright.enable-scan=true \
-#    media.stagefright.enable-http=true
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-meta=true \
+    media.stagefright.enable-scan=true \
+    media.stagefright.enable-http=true
 
 # Performance tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
