@@ -89,6 +89,8 @@ BOARD_GPS_LIBRARIES := libgps
 
 TARGET_ELECTRONBEAM_FRAMES := 8
 
+BOARD_ELECTRONBEAM_HACK :=true
+
 # Use HTC USB Function Switch to enable tethering via USB
 #BOARD_USE_HTC_USB_FUNCTION_SWITCH := true
 
