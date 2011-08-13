@@ -30,7 +30,9 @@ JS_ENGINE := v8
 -include vendor/htc/dream_sapphire/BoardConfigVendor.mk
 
 TARGET_BOARD_PLATFORM := msm7k
-TARGET_CPU_ABI := armeabi
+TARGET_BOARD_PLATFORM_GPU := qcom
+TARGET_CPU_ABI := armeabi-v6j
+TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv6j
 
 TARGET_NO_BOOTLOADER := true
