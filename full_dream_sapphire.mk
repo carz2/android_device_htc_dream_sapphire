@@ -27,16 +27,14 @@ PRODUCT_COPY_FILES += \
     device/htc/dream_sapphire/prebuilt/rzscontrol:system/xbin/rzscontrol
 
 PRODUCT_PACKAGES += \
-    VoiceDialer \
-    sensors.trout \
-    sensors.sapphire \
+	VoiceDialer \
+	sensors.sapphire \
 	sapphire-keypad.kcm \
 	wlan.ko \
 	vold.fstab \
 	wlan_loader \
 	tiwlan.ini \
 	libOmxCore \
-	gps.trout \
 	gps.sapphire \
 	copybit.msm7k \
 	gralloc.msm7k \
