@@ -119,9 +119,25 @@ endif
 #Copy in prebuilt kernel modules
 #
 
+KERNEL_NAME := 2.6.34.4-carz
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/htc/dream_sapphire/prebuilt/modules/6355-cm7-modules.sqf:/system/lib/modules/modules.sqf
+    device/htc/dream_sapphire/prebuilt/modules/Module.symvers:system/lib/modules/$(KERNEL_NAME)/kernel/Module.symvers \
+    device/htc/dream_sapphire/prebuilt/modules/modules.order:system/lib/modules/$(KERNEL_NAME)/kernel/modules.order \
+    device/htc/dream_sapphire/prebuilt/modules/modules.builtin:system/lib/modules/$(KERNEL_NAME)/kernel/modules.builtin \
+    device/htc/dream_sapphire/prebuilt/modules/wlan.ko:system/lib/modules/$(KERNEL_NAME)/kernel/drivers/net/wireless/tiwlan1251/wlan.ko \
+    device/htc/dream_sapphire/prebuilt/modules/ramzswap.ko:system/lib/modules/$(KERNEL_NAME)/kernel/drivers/staging/ramzswap/ramzswap.ko \
+    device/htc/dream_sapphire/prebuilt/modules/cifs.ko:system/lib/modules/$(KERNEL_NAME)/kernel/fs/cifs/cifs.ko \
+    device/htc/dream_sapphire/prebuilt/modules/fuse.ko:system/lib/modules/$(KERNEL_NAME)/kernel/fs/fuse/fuse.ko \
+    device/htc/dream_sapphire/prebuilt/modules/lockd.ko:system/lib/modules/$(KERNEL_NAME)/kernel/fs/lockd/lockd.ko \
+    device/htc/dream_sapphire/prebuilt/modules/nfs_acl.ko:system/lib/modules/$(KERNEL_NAME)/kernel/fs/nfs_common/nfs_acl.ko \
+    device/htc/dream_sapphire/prebuilt/modules/nfs.ko:system/lib/modules/$(KERNEL_NAME)/kernel/fs/nfs/nfs.ko \
+    device/htc/dream_sapphire/prebuilt/modules/mip6.ko:system/lib/modules/$(KERNEL_NAME)/kernel/net/ipv6/mip6.ko \
+    device/htc/dream_sapphire/prebuilt/modules/sunrpc.ko:system/lib/modules/$(KERNEL_NAME)/kernel/net/sunrpc/sunrpc.ko \
+    device/htc/dream_sapphire/prebuilt/modules/auth_rpcgss.ko:system/lib/modules/$(KERNEL_NAME)/kernel/net/sunrpc/auth_gss/auth_rpcgss.ko \
+    device/htc/dream_sapphire/prebuilt/modules/rpcsec_gss_krb5.ko:system/lib/modules/$(KERNEL_NAME)/kernel/net/sunrpc/auth_gss/rpcsec_gss_krb5.ko \
+    device/htc/dream_sapphire/prebuilt/modules/wlan.ko:system/lib/modules/wlan.ko
 
 ## (2) Also get non-open-source aspects if available
 $(call inherit-product-if-exists, vendor/htc/dream_sapphire/dream_sapphire-vendor.mk)
