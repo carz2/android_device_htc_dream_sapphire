@@ -19,23 +19,3 @@ LOCAL_SRC_FILES := sapphire-keypad.kcm
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
 
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := trout-keypad.kcm
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := trout-keypad-v2.kcm
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := trout-keypad-v3.kcm
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_KEY_CHAR_MAP)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := trout-keypad-qwertz.kcm
-LOCAL_MODULE_TAGS := optional
-include $(BUILD_KEY_CHAR_MAP)
-
