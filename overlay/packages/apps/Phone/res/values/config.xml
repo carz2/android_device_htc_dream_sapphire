@@ -16,7 +16,7 @@
 
 <resources>
     <bool name="allow_incoming_call_touch_ui">true</bool>
-    <bool name="allow_in_call_touch_ui">true</bool>
+    <bool name="allow_in_call_touch_ui">false</bool>
 
     <!-- Enable the onscreen "Dial" button in the emergency dialer. -->
     <bool name="config_show_onscreen_dial_button">true</bool>
