@@ -25,7 +25,11 @@
          to avoid going into software rendering. -->
     <bool name="config_sf_limitedAlpha">true</bool>
 
+    <!-- Enable electron beam animation, true disables electron beam. -->
     <bool name="config_animateScreenLights">false</bool>
+
+    <!-- Enable the screen-off animation -->
+    <bool name="config_enableScreenOffAnimation">false</bool>
 
     <!-- Flag indicating whether the surface flinger is inefficient
          at performing a blur.  Used by parts of the UI to turn off
